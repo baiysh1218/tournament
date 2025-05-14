@@ -6,7 +6,7 @@ const path = require('path');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port =  3000;
 
 // ✅ Инициализация пула соединений
 let pool;
@@ -17,6 +17,8 @@ try {
         database: 'postgres',     // База данных
         password: '1218',         // Пароль
         port: 5432,
+        ssl: { rejectUnauthorized: false }, // для Render
+        connectionString: process.env.DATABASE_URL,
     });
 
     pool.query('SELECT NOW()', (err) => {
