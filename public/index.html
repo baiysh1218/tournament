@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link href="/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="container">
+    <div class="form-section">
+        <div class="form-section-header"></div>
+        <form id="registerForm">
+        <h1>Введите имя или nickname</h1>
+            <p>Присоединяйся к нашему турниру по CS2!
+                Турнир пройдёт в эту пятницу, 16.05.2025, в 21:00 в формате 2 на 2.
+<br />
+              <strong>⚠️ Внимание:</strong>
+                Имя или никнейм можно ввести только один раз. После регистрации повторный ввод невозможен — будь внимателен!
+
+                Заполняй форму ниже и будь готов к бою!</p>
+            <div>
+                <input placeholder="nickname" type="text" id="username" name="username" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+    <div class="users-section">
+        <h2>Участники турнира</h2>
+        <button id="refreshUsers">Refresh List</button>
+        <ul id="usersList"></ul>
+    </div>
+
+
+
+
+    <span>Аскар иди нахуй</span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
